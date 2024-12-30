@@ -558,7 +558,7 @@ int *t, *pf1, *pf2;
 
 	case TCOM:
 		cp1 = t[DCOM];
-		if(equal(cp1, "chdir")) {
+		if(equal(cp1, "chdir") || equal(cp1, "cd")) {
 			if(t[DCOM+1] != 0) {
 				if(chdir(t[DCOM+1]) < 0)
 					err("chdir: bad directory");
